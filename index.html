@@ -1,0 +1,40 @@
+<!-- 
+TASK #1 -> Sa se creeze o componenta "avatar" care afiseaza o imagine cu forma circulara.
+TASK #2 -> https://javascript.info/custom-elements
+TASK #3 -> Sa se creeze un custom element numit "word-counter" care extinde <p> si vine in plus cu un buton "Show word count". La apasarea butonului apare numarul de cuvinte din text.
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+
+</html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Component Tutorial</title>
+</head>
+
+
+<body>
+	<div>
+		<h2>Task #1.</h2>
+		<user-avatar
+			avatar="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51IEd0e1aBFElkIFiSFFJImFt5wENe-9yqw&usqp=CAU">
+		</user-avatar>
+		<user-avatar
+			avatar="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm6L2jdgUcljnfqT2QraTGxE3rXXZGDk-SFQ&usqp=CAU">
+		</user-avatar>
+	</div>
+	<div>
+		<h2>Task #2.</h2>
+		<live-timer id="live-timer-id" tick="updateTimer()"></live-timer>
+	</div>
+	<div>
+		<h2>Task #3.</h2>
+		<word-counter></word-counter>
+		<p is="word-counter"></p>
+	</div>
+	<script src="elements.js"></script>
+</body>
