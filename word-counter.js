@@ -24,7 +24,7 @@ class WordCounter extends HTMLParagraphElement {
 	}
 
 	revealCount() {
-		let numberOfWords = this.shadowRoot.querySelector('p').innerText.split(" ").length;
+		const numberOfWords = this.shadowRoot.querySelector('p').innerText.split(" ").length;
 		alert(`Textul contine ${numberOfWords} cuvinte.`);
 	}
 
