@@ -11,7 +11,7 @@ templateCountWords.innerHTML = `
 		}
 	</style>
 	<div class="word-counter">
-		<p>Acesta este un simplu text.</p>
+		<p class="word-counter">Acesta este un simplu text.</p>
 		<button id="reveal-count-button">Count words</button>
 	</div>
 `;
@@ -24,12 +24,13 @@ class WordCounter extends HTMLParagraphElement {
 	}
 
 	revealCount() {
-		const numberOfWords = this.shadowRoot.querySelector('p').innerText.split(" ").length;
+		const numberOfWords = document.querySelector("p").getAttribute("text").split(" ").length;
 		alert(`Textul contine ${numberOfWords} cuvinte.`);
 	}
 
 	connectedCallback() {
 		this.shadowRoot.querySelector('#reveal-count-button').addEventListener('click', () => this.revealCount());
+		this.shadowRoot.querySelector('.word-counter').textContent = document.querySelector("p").getAttribute("text");
 	}
 }
 customElements.define('word-counter', WordCounter, { extends: 'p' });
