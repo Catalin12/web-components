@@ -11,7 +11,6 @@ templateCountWords.innerHTML = `
 		}
 	</style>
 	<div class="word-counter">
-		<p class="word-counter">Acesta este un simplu text.</p>
 		<button id="reveal-count-button">Count words</button>
 	</div>
 `;
